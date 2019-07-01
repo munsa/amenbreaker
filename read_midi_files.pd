@@ -1,0 +1,327 @@
+#N canvas 92 2 1362 686 10;
+#X obj -211 132 mrpeach/midifile;
+#X msg -211 77 read \$1;
+#X obj -211 209 route 144 145 146 147 148 149 150 151 152 153 154 155
+156 157 158 159;
+#X obj -211 277 unpack 0 0;
+#X obj -118 155 route bang;
+#X obj -118 177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text -95 176 end of file;
+#X floatatom -56 -43 5 0 0 0 - - -;
+#X obj -335 -133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg -324 -109 refresh;
+#X text -265 -110 "refresh" to get list of files and init;
+#X text -311 -134 "bang" to retrieve filenames individually;
+#X text -16 -44 number of midi files in folder;
+#X obj -201 108 until;
+#X obj -71 1 f;
+#X obj -71 23 until;
+#X obj -71 -19 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text -45 -20 "bang" to retrieve ALL FILES!;
+#X obj -335 -75 listdir D:/Escritorio/Projecte/midi_amens/*.mid;
+#X obj -234 -12 print name;
+#X obj -335 -52 t b s;
+#X floatatom -165 168 5 0 0 0 - - -;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob1 32 float 3;
+#A 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.166667
+0.166667 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 275 -60 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob2 32 float 3;
+#A 0 0.25 1 0 0.25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0.25 0.25 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 327 -60 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob3 32 float 3;
+#A 0 0.333333 0 1 0.333333 0 0 0 0 0 0 0 0 0 0 0 0.333333 0 0 0 0 0
+0 0 0 0 0 0 0 0 0.666667 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 379 -60 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob4 32 float 3;
+#A 0 0 0.5 0.5 1 0.5 0 0 0 0 0 0.5 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0.5 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 431 -60 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob5 32 float 3;
+#A 0 1 0 0 1 0.5 0 0 0.5 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0.5 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 483 -60 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob6 32 float 3;
+#A 0 0 1 0 0.5 0.5 1 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0.5 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 535 -60 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob7 32 float 3;
+#A 0 0.5 0 1 0.5 0 0 0.5 0.5 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0.5 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 587 -60 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob8 32 float 3;
+#A 0 0 0.5 0 1 0.5 0.5 0.5 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0.5 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 639 -60 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob9 32 float 3;
+#A 0 1 0 0 0.25 0 0 0.25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0.25 0.25 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 691 -60 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob10 32 float 3;
+#A 0 0 1 0.333333 0 0.666667 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0.333333 0.333333 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 743 -60 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob11 32 float 3;
+#A 0 0 0 0.333333 0.333333 0 1 0 0 0 0 0 0 0 0 0 0.333333 0 0 0 0 0
+0 0 0 0 0 0 0 0 0.666667 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 275 18 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob12 32 float 3;
+#A 0 0 0 0 1 0.25 0 0 0 0 0 0.25 0 0 0 0.25 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0.25 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 327 18 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob13 32 float 3;
+#A 0 0 0 0.5 0 0.5 1 0 1 0 0 0 0.5 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 379 18 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob14 32 float 3;
+#A 0 0 1 0 0 0.5 1 0.5 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0.5 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 431 18 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob15 32 float 3;
+#A 0 0 0 0.5 1 0 0.5 0.5 0 0.5 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0.5 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 483 18 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob16 32 float 3;
+#A 0 0 0 0 0 1 0.333333 0.333333 0.333333 0 0 0.333333 0.333333 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 535 18 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob17 32 float 3;
+#A 0 1 0 0 0 0 0 0.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2
+0.2 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 587 18 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob18 32 float 3;
+#A 0 0 1 0 0.25 0.25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0.25 0.25 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 639 18 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob19 32 float 3;
+#A 0 0.5 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0
+1 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 691 18 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob20 32 float 3;
+#A 0 0 0.5 0.5 1 0.5 0 0 0 0 0 0.5 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0.5 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 743 18 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob21 32 float 3;
+#A 0 1 0 0 0.5 0 0 0 0.5 0 0 1 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0.5 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 274 96 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob22 32 float 3;
+#A 0 0 1 0 0.5 0 1 0.5 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0.5 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 326 96 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob23 32 float 3;
+#A 0 0.25 0 0.25 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0.5 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 378 96 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob24 32 float 3;
+#A 0 0 0.5 0 1 0 0.5 0.5 0.5 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0.5 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 430 96 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob25 32 float 3;
+#A 0 1 0 0 0 0.333333 0.666667 0.333333 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0.333333 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 482 96 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob26 32 float 3;
+#A 0 0 1 0.666667 0 0 0 0 0 0 0.333333 0 0.333333 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0.333333 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 534 96 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob27 32 float 3;
+#A 0 0 0 0 0 0.25 1 0 0.25 0 0 0.25 0 0 0 0 0.25 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 586 96 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob28 32 float 3;
+#A 0 0 0 0.666667 1 0 0 0.333333 0 0 0 0 0 0 0 0.333333 0.333333 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 638 96 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob29 32 float 3;
+#A 0 0 0 0 0 0 1 0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 0 0 0 0 0 0 0 0 0 0
+0.2 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 690 96 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob30 32 float 3;
+#A 0 0 0.5 0.5 1 0.5 0 0 0 0.5 0 0 0.5 0 0 0 0.5 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 742 96 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob31 32 float 3;
+#A 0 0 0 0 0.333333 0.333333 0.333333 0 0 0 0 1 0 0 0 0.333333 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0.333333 0 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 275 177 graph;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array prob32 32 float 3;
+#A 0 0 0 0.5 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0.5 0;
+#X coords 0 1 32 0 50 60 1 0 0;
+#X restore 327 177 graph;
+#X obj -298 475 tabwrite prob\$1;
+#X floatatom -211 394 5 0 0 0 - - -;
+#X obj -334 290 i;
+#X obj -290 291 + 1;
+#X floatatom -334 316 5 0 0 0 - - -;
+#X msg -334 395 set prob\$1;
+#X obj -298 429 tabread;
+#X obj -298 451 + 1;
+#X obj -211 412 t f f;
+#X msg 275 445 \; prob\$1 const 0;
+#X obj 275 364 until;
+#X msg 275 343 32;
+#X obj 275 384 i;
+#X obj 319 385 + 1;
+#X obj 275 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 239 299 INITIALIZE TABLES;
+#X obj 428 364 until;
+#X msg 428 343 32;
+#X obj 428 384 i;
+#X obj 472 385 + 1;
+#X obj 428 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 428 446 \; prob\$1 normalize;
+#X text 392 299 NORMALIZE TABLES;
+#X obj -211 328 - 36;
+#X obj -211 307 t f b;
+#X obj -334 370 + 1;
+#X obj -334 343 % 32;
+#X obj 275 405 % 32;
+#X obj 428 405 % 32;
+#X obj 275 425 + 1;
+#X obj 428 426 + 1;
+#X obj -87 317 select 16 17;
+#X msg -217 355 29;
+#X msg -188 355 30;
+#X connect 0 0 2 0;
+#X connect 0 1 21 0;
+#X connect 0 2 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 2 1 3 0;
+#X connect 2 2 3 0;
+#X connect 2 3 3 0;
+#X connect 2 4 3 0;
+#X connect 2 5 3 0;
+#X connect 2 6 3 0;
+#X connect 2 7 3 0;
+#X connect 2 8 3 0;
+#X connect 2 9 3 0;
+#X connect 2 10 3 0;
+#X connect 2 11 3 0;
+#X connect 2 12 3 0;
+#X connect 2 13 3 0;
+#X connect 2 14 3 0;
+#X connect 2 15 3 0;
+#X connect 3 0 78 0;
+#X connect 4 0 5 0;
+#X connect 4 0 13 1;
+#X connect 7 0 14 1;
+#X connect 8 0 18 0;
+#X connect 9 0 18 0;
+#X connect 13 0 0 0;
+#X connect 14 0 15 0;
+#X connect 15 0 8 0;
+#X connect 16 0 14 0;
+#X connect 18 0 20 0;
+#X connect 18 1 7 0;
+#X connect 20 0 13 0;
+#X connect 20 1 1 0;
+#X connect 20 1 19 0;
+#X connect 55 0 62 0;
+#X connect 56 0 57 0;
+#X connect 56 0 58 0;
+#X connect 57 0 56 1;
+#X connect 58 0 80 0;
+#X connect 59 0 60 0;
+#X connect 59 0 54 0;
+#X connect 60 0 61 0;
+#X connect 61 0 54 0;
+#X connect 62 0 60 0;
+#X connect 62 1 54 1;
+#X connect 64 0 66 0;
+#X connect 65 0 64 0;
+#X connect 66 0 67 0;
+#X connect 66 0 81 0;
+#X connect 67 0 66 1;
+#X connect 68 0 65 0;
+#X connect 70 0 72 0;
+#X connect 71 0 70 0;
+#X connect 72 0 73 0;
+#X connect 72 0 82 0;
+#X connect 73 0 72 1;
+#X connect 74 0 71 0;
+#X connect 77 0 85 0;
+#X connect 78 0 77 0;
+#X connect 78 1 56 0;
+#X connect 79 0 59 0;
+#X connect 80 0 79 0;
+#X connect 81 0 83 0;
+#X connect 82 0 84 0;
+#X connect 83 0 63 0;
+#X connect 84 0 75 0;
+#X connect 85 0 86 0;
+#X connect 85 1 87 0;
+#X connect 85 2 55 0;
+#X connect 86 0 55 0;
+#X connect 87 0 55 0;
